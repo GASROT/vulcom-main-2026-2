@@ -9,6 +9,7 @@ controller.login = async function(req, res) {
   try {
     // Consulta parametrizada via Prisma:
     // os valores recebidos não podem alterar a estrutura da consulta.
+    // Vulnerabilidade já foi editada no ultimo commit
     const user = await prisma.user.findFirst({
       where: {
         username,
