@@ -58,15 +58,14 @@ model User {
   fullname          String        // Nome completo
   username          String        @unique   // Não pode repetir
   email             String        @unique
-  // OWASP Top 10:2025 A04 - Falhas de Criptografia:
-  // os controllers e o seed gravam neste campo a senha em texto puro, sem hash.
+  // Armazena o hash Argon2id com parâmetros e sal, nunca a senha em texto claro.
   password          String
   is_admin          Boolean       @default(false)
   created_cars      Car[]         @relation("created_user")
   updated_cars      Car[]         @relation("updated_user")
 }
 
-// Dados do desafio de XSS. A saída sem escape fica restrita à tela didática.
+
 model XssComment {
   id         Int      @id @default(autoincrement())
   content    String
