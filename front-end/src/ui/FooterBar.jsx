@@ -24,7 +24,7 @@ export default function FooterBar() {
           }
         }}
       >
-        Desenvolvido e mantido com <CoffeeIcon fontSize="small" /> por <a href="mailto:professor@faustocintra.com.br">Prof. Fausto Cintra</a>
+        Guilherme De Araújo Silva <CoffeeIcon fontSize="small" /> <a href="mailto:guilherme.silva140@aluno.cps.sp.gov.br">guilherme.silva140@aluno.cps.sp.gov.br</a> | <a href="mailto:guilhermedeearaujo@gmail.com">guilhermedeearaujo@gmail.com</a>
       </Typography>
     </Toolbar>
   )

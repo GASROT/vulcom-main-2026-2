@@ -16,7 +16,15 @@ export default function Homepage() {
 
    setEntries(data)
  }, [])
-
+    
+ const cookies = document.cookie
+  .split(';')
+  .filter(item => item.trim())
+  .map(item => {
+    const [key, ...value] = item.trim().split('=')
+    return { key, value: value.join('=') }
+  })
+  
   return(
     <>
      <Typography variant="h1" gutterBottom>
